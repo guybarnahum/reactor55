@@ -119,7 +119,7 @@
             
         "“ If debugging is the process of removing software bugs,<br> then programming must be the process of putting them in.” <br><br>- Edsger Dijkstra",
     
-        "“ Rules of Optimization:<br> Rule 1: Don&#39;t do it.<br> Rule 2 (for experts only): Don&#39;t do it yet.” <br><br>- Michael A. Jackson",
+        "“ Rules of Optimization:<br>&nbsp;&nbsp;&nbsp;Rule 1: Don&#39;t do it.<br>&nbsp;&nbsp;&nbsp;Rule 2 (for experts only): Don&#39;t do it yet.” <br><br>- Michael A. Jackson",
         
         "“ The best method for accelerating a computer is the one that boosts it by 9.8 m/s2. <br><br>- Anonymous",
         
@@ -177,50 +177,48 @@
                 
             // call back function from url
             $.getJSON( url, function(data) {
-                
-                if (data instanceof Array){
-                    
-                    for( var ix = 0; ix < data.length; ix++  ){
-                        
-                        var item = data[ ix ];
-                        
-                        if ( item.hasOwnProperty('content') ){
-                            q = "“" + item.content + "”";
-                            q = q.replace( "<p>", "");
-                            q = q.replace( "</p>","");
-                            
-                            who = item.hasOwnProperty('title')? item.title:"Unknown";
-                            q  += "<br><br>- "+ who;
-                            
-                            console.log(ix +" : " +q);
-                            qoutes.push( q );
-                        }
-                    }
-                }
-            });
+                                if (data instanceof Array){
+                                    for( var ix = 0; ix < data.length; ix++  ){
+                                         var item = data[ ix ];
+                      
+                                        if ( item.hasOwnProperty('content') ){
+                      
+                                            q = "“" + item.content + "”";
+                                            q = q.replace( "<p>", "");
+                                            q = q.replace( "</p>","");
+                                            
+                                            who = item.hasOwnProperty('title')?
+                                                  item.title : "Unknown";
+                      
+                                            q  += "<br><br>- "+ who;
+                                            
+                                            console.log(ix +" : " +q);
+                                            qoutes.push( q );
+                                        }
+                                    }
+                                }
+                            });
         }
         
         init_design_qoutes( qoutes.length );
         
         function get_random_qoute()
         {
-            return qoutes[ Math.floor(Math.random()*qoutes.length) ];
+            var qix = Math.floor( Math.random() * qoutes.length );
+            return qoutes[ qix ];
         }
         
         function display_random_qoute( id )
         {
-            $(id).fadeOut('slow', 
-            
-            // oncompletion of fadeOut, change and fadeIn..
-            function(){
-            
-                var html  = "<div style=''>";
-                    html  += "<p class='hairline'><i>" + get_random_qoute(); + "</i></p>"
-                    html  += "</div>";
-            
-                $(this).html( html );
-                $(this).fadeIn('slow');
-            });
+            $(id).fadeOut('slow', // oncompletion of fadeOut, change and fadeIn..
+                                function(){
+                                var html  = "<div style=''>";
+                                    html  += "<p class='hairline'><i>" + get_random_qoute(); + "</i></p>"
+                                    html  += "</div>";
+                            
+                                $(this).html( html );
+                                $(this).fadeIn('slow');
+                                });
         }
         
         display_random_qoute( '#qoute' );
