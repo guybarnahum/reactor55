@@ -169,7 +169,25 @@
         
         "“ Science is what we understand well enough to explain to a computer. Art is everything else we do.” <br><br><b>- Donald Knuth",
         ];
-        
+
+        function shuffle(array) {
+            var m = array.length, t, i;
+            
+            // While there remain elements to shuffle…
+            while (m) {
+                
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
+                
+                // And swap it with the current element.
+                t = array[m] ;
+                array[m] = array[i] ;
+                array[i] = t;
+            }
+            
+            return array;
+        }
+
         function init_design_qoutes( num )
         {
             var url  = 'http://quotesondesign.com/wp-json/posts';
@@ -199,30 +217,35 @@
                                 }
                             });
         }
-        
-        init_design_qoutes( qoutes.length );
-        
-        function get_random_qoute()
+
+        var qix = 0;
+
+        function get_qoute()
         {
-            var qix = Math.floor( Math.random() * qoutes.length );
-            return qoutes[ qix ];
+            q = qoutes[ qix ];
+            qix = ( qix + 1 )% qoutes.length;
+            
+            return q;
         }
         
-        function display_random_qoute( id )
+        function display_qoute( id )
         {
             $(id).fadeOut('slow', // oncompletion of fadeOut, change and fadeIn..
                                 function(){
                                 var html  = "<div style=''>";
-                                    html  += "<p class='hairline'><i>" + get_random_qoute(); + "</i></p>"
+                                    html  += "<p class='hairline'><i>" + get_qoute(); + "</i></p>"
                                     html  += "</div>";
                             
                                 $(this).html( html );
                                 $(this).fadeIn('slow');
                                 });
         }
-        
-        display_random_qoute( '#qoute' );
-        setInterval("display_random_qoute('#qoute')", 12000);
+
+        init_design_qoutes( qoutes.length );
+        qoutes = shuffle( qoutes );
+
+        display_qoute( '#qoute' );
+        setInterval("display_qoute('#qoute')", 12000);
         
         </script>
         
