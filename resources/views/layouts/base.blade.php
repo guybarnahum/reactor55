@@ -48,12 +48,25 @@
 
         <script src="{{ asset('assets/js/packages.min.js') }}""></script>
         <script src="{{ asset('assets/js/theme.min.js') }}""></script>
+        <script src="assets/js/contact.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="assets/js/map.min.js"></script>
+        
+        <!-- When using isotope in portfolio class set it to fitRows layout -->
+        <script>
+            $(document).ready( function() {
+                $('.portfolio').isotope({
+                    layoutMode: 'fitRows',
+                    itemSelector: '.portfolio-item'
+                });
+            });
+        </script>
         
         <!-- js annotator -->
 
         <script src="http://assets.annotateit.org/annotator/v1.2.10/annotator-full.min.js"></script>
         <link rel="stylesheet" href="http://assets.annotateit.org/annotator/v1.2.10/annotator.min.css">
-        
+
         <script>
         /*
         $('.container').annotator()

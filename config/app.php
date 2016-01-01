@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -149,6 +149,11 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * Debugbar Service Providers...
+         */
+        Barryvdh\Debugbar\ServiceProvider::class,
+    
+        /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
@@ -179,6 +184,7 @@ return [
         'Config'    => Illuminate\Support\Facades\Config::class,
         'Cookie'    => Illuminate\Support\Facades\Cookie::class,
         'Crypt'     => Illuminate\Support\Facades\Crypt::class,
+        'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         'DB'        => Illuminate\Support\Facades\DB::class,
         'Eloquent'  => Illuminate\Database\Eloquent\Model::class,
         'Event'     => Illuminate\Support\Facades\Event::class,
@@ -201,7 +207,6 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
     ],
 
 ];

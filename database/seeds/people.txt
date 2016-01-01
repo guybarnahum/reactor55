@@ -1,0 +1,41 @@
+# ==============================================================================
+# people.txt
+#
+# Model  : App\Person
+# Format : 'name', 'title', 'desc', 'moto', 'roles', 'accounts', 'photos', 'tags'
+#
+# ==============================================================================
+
+--debug
+--dump_table
+
+# Principals
+
+Guy Bar-Nahum:Software, UX & Strategy:Ex VP UX Mobile @ Samsung, Ex Director iPod Software @ Apple:Likes Coffee and Beer:principal.general-partner:linkedin=guybarnahum,facebook=guy.barnahum:large=assets/images/people/GuyBarNahum.jpg:sw ux in-sf in-tlv
+
+David Tupman:Hardware, Product Design & Strategy:Ex VP iPhone Hardware @ Apple, Member of the Board @ Cirrus Logic @ PixelWorks, Technical Advisor to the Board @ Movidius:Says I like ancient stuff:principal.partner:linkedin=david-tupman-32048b:large=assets/images/people/DavidTupman.jpg:hw pd in-sf
+
+Michael Rosenblatt:Product Design, Manufacturing & Hardware Technologies:Ex Director @ Samsung, Apple, MIT:Says Lets build it!:principal.partner:linkedin=mrosenblatt:large=assets/images/people/MichaelRosenblatt.jpg:hw sw pd in-sf
+
+Oded Hermoni:Early Stage Investments:Israel and Bay Area VC @ Rhodium, J-Angels:Says Lets build it!:principal.general-partner:linkedin=odedhermoni:large=assets/images/people/OdedHermoni.jpg:vc in-sf in-tlv
+
+# Advisors
+
+Ran Reske:Investments & Business Development:Ex VC @ Norwest Venture Partners:Says Lets build it!:adviser.corp,adviser.startup:linkedin=ran-reske-133ba31:large=assets/images/people/RanReske.jpg:vc in-sf
+
+Shriram Narayanan:Finance and Strategy:Director Corporate Development @ Intel:Says Lets build it!:adviser.corp,adviser.startup,strategic.intel:linkedin=shriram-narayanan-949b86::vc in-sf
+
+Michael Cornwell:Technology, Asia:Ex Apple, Sun, CTO @Pure Storage:Says Lets build it!:adviser.startup:linkedin=cornwell:large=assets/images/people/MichaelCornwell.jpg:in-asia hw sw
+
+Andy Grignon:Software & Product Strategy:Ex VP webOS Apps & Platform @ Palm, Ex Apple:Says Lets build it!:adviser.startup:linkedin=andygrignon:large=assets/images/people/AndyGrignon.jpg:in-sf sw
+
+Jeff Dauber:Hardware & Product Engineering:Ex Sr. Director iPhone, Watch, Mac and Core Technologies @ Apple:Says Lets build it!:adviser.corp,adviser.startup:linkedin=jeff-dauber-936162:large=assets/images/people/JeffDauber.jpg:in-sf hw pd
+
+Jesse Dorogusker:Hardware & Product Engineering:Ex Director Engineering iPhone | iPad | iPod Accessories @ Apple, Hardware Lead @ Square:Says Lets build it!:adviser.corp,adviser.startup:linkedin=jessedorogusker:large=assets/images/people/JesseDorogusker.jpg:in-sf hw sw pd
+
+Moe Tanabian:Product Engineering & Cloud Technologies:VP IoT Innovation Lab @ Samsung, Kindle Engineering @ Amazon:Says Lets build it!:adviser.startup:linkedin=mtanabian:large=assets/images/people/MoeTanabian.jpg:in-sf hw sw pd
+
+Alan Messer:IoT and AI Platform Software:VP Advanced Software Technology @ Samsung:Says Lets build it!:adviser.startup:linkedin=alanmesser:large=assets/images/people/AlanMesser.jpg:in-sf sw
+
+Byeong Cheol (BC) Hwang:Samsung Business Development, Korea:Sr. Director Mobile UX @ Samsung:Says Anyong Haseyo!:adviser.corp,adviser.startup:linkedin=kinghwang:large=assets/images/people/BCHwang.jpg:in-sf sw
+
